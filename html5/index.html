@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            font-family: sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.125em;
+            line-height: 1.6;
+            color: #333;
+            padding: 2em;
+        } */
+        .heroo{
+            display: flex;
+            grid-gap: 2em;
+            align-items: center;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @media(min-width:960px){
+            .heroo{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+
+        body,h1{
+            padding: 0;
+            margin: 0;
+            font-family: Arial;
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* background-color: rgba(0,0,0,0.3); */
+            background-image: linear-gradient(to right,rgba(0,242,96,0.3), rgba(47,168,248,0.3));
+            color: rgb(58, 55, 52,0.5);
+            font-size: 3em;
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .video-bg{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+
+
+
+        .satu{
+            background-color: #ddd;
+            width: 300px;
+            height: 300px;
+        }
+        .kotak1{
+            width: 100px;
+            height: 100px;
+            fill: salmon;
+        }
+        svg{
+            display: block;
+            margin: 20px;
+            background-color: #eee;
+        }
+        .bintang{
+            background-color: transparent;
+            /* animation: putar 5s linear  infinite; */
+        }
+
+        @keyframes putar{
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        body{
+            min-height: 1000px;
+        }
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            width: 600px;
+            padding: 20px;
+        }
+        form div{
+            margin: 10px;
+        }
+        label{
+            display: block;
+        }
+
+
+        input:invalid, input:required:invalid{
+            border: none;
+            outline: 2px solid red;
+            border-radius: 2px;
+        }
+        input:valid, input:required{
+            border:1px solid black;
+            outline: inherit;
+            border-radius: 2px;
+        }
+        .dark-mode{
+            background-color: #222;
+            color: #fff;
+        }
+        a{
+            color: inherit;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <h1>Welcome to My Side</h1>
+    <div id="navigation" role="navigation" aria-label="my-main-navigation">
+        <h2>Navigation Title</h2>
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </div>
+    <figure>
+        <img src="img/cat.jpg" alt="cat">
+        <figcaption>cat kyowoo</figcaption>
+    </figure> -->
+
+    <!-- <div class="heroo">
+        <div class="hero-text">
+            <h1>Hello Semua</h1>
+            <p>haii ini adalah website uji coba html5 kjnnncnknidcjknn aiuindlw noenx josnmxiiwi9 skjwjinamiopa isijinzehbkanjfgdf ,mnrty</p>
+            <picture>
+                <source media="(min-width:960px)" srcset="img/catt.jpg" sizes="50vw">
+                <source media="(min-width:600px )" srcset="img/cattt.jpg" >
+                <img src="img/cat.jpg" alt="cat">
+            </picture>
+        </div>
+    </div> -->
+
+
+    <!-- AUDIO -->
+    <!-- <figure>
+        <figcaption>
+            Dengarkan intro inii
+        </figcaption>
+        <audio controls loop >
+            <source src="audio/audio-logo-fa-la-la-185246.mp3" type="audio/mpeg">
+        </audio>
+    </figure> -->
+
+    <!-- VIDEO   -->
+    <!-- <video src="video/cb.mp4" width="700" controls></video> -->
+    <!-- <figure>
+        <figcaption>
+            Cibaa
+        </figcaption>
+        <video width="500" poster="img/b.png" autoplay controls loop>
+            <source src="video/ya.mp4" type="video/mp4">
+            Browser tidak mendukung tag <code>video</code>
+        </video>
+    </figure> -->
+
+    <!-- <div class="hero">
+        <h1>Film BLUE</h1>
+        <video class="video-bg" src="video/ya.mp4" autoplay muted loop></video>
+    </div> -->
+
+    <!-- <video controls width="500">
+        <source src="video/ya.mp4" type="video/mp4">
+        <track src="captions/caption.vtt" kind="captions" title="b.ind" srclang="id">
+    </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2_nitUEj_ng?si=8Rl9r5mJivkqY9R3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+
+
+    <!-- CANVAS -->
+    <!-- <canvas id="mycanvas"></canvas>
+
+    <script>
+
+        const mycanvas= document.getElementById('mycanvas');
+    
+        mycanvas.width=window.innerWidth;
+        mycanvas.height=window.innerHeight;
+    
+        const c=mycanvas.getContext('2d');
+
+
+        //square
+        // c.fillRect(25,25,100,100);
+
+        // c.fillStyle='pink';
+        // c.strokeStyle='#333';
+        // c.lineWidth=5;
+
+        // c.rect(50,50,300,400);
+        // c.fill();
+        // c.stroke();
+
+
+        //circle
+        // c.fillStyle='lightblue';
+        // c.beginPath();
+        // c.arc(550,200,150,0,2*Math.PI);
+        // c.fill();
+        // c.stroke();
+
+
+        //triangle
+        // c.fillStyle='lightgreen';
+        // c.strokeStyle='#000';
+        // c.lineWidth=2;
+
+        // c.beginPath();
+        // c.moveTo(900,50);
+        // c.lineTo(1050,350);
+        // c.lineTo(750,350);
+        // c.closePath();
+        // c.fill();
+        // c.stroke();
+
+
+        let x=300;
+        let y=200;
+        let speedx=5;
+        let speedy=5;
+        let radius=150;
+
+        function draw(){
+            window.requestAnimationFrame(draw);
+            c.clearRect(0,0,innerWidth,innerHeight);
+            console.log('ok');
+            c.fillStyle='lightblue';
+            c.beginPath();
+            c.arc(x,y,radius,0,2*Math.PI);
+            c.fill();
+            c.stroke();
+
+            if(x+radius > innerWidth || x-radius<0){
+                speedx= -speedx;
+            }
+            if(y+radius > innerHeight || y-radius<0){
+                speedy= -speedy;
+            }
+
+            x +=speedx;
+            y +=speedy;
+        }
+        draw();
+    </script> -->
+
+
+
+    <!-- SVG -->
+    <!-- <svg class="satu" viewBox="50 50 300 300">
+        <rect class="kotak1"/>
+    </svg>
+
+    <svg width="150" height="150">
+        <rect width="100" height="100" fill="lightblue"/>
+        <circle r="50" cx="50" cy="50" fill="salmon"/>
+        <rect width="70" height="70" x="15" y="15 " fill="#333" />
+    </svg>
+    <svg>
+        <path fill="none" stroke="black" d="M 60,10 L 110,90 H 10 L 60,10"/>
+        <path fill="none" stroke="black" d="m 170,10 l 50,80 h-100 l 50,-80"/>
+    
+    </svg>
+    <svg>
+        <path fill="none" stroke="red" d="M 10,90 C 30,90 25,10 50,10 S 70,90 90,90"/>
+    </svg>
+
+    <svg>
+        <path d="M 10,30
+                A 20,20 0,0,1 50,30
+                A 20,20 0,0,1 90,30
+                Q 90,60 50,90
+                Q 10,60 10,30 z" fill="red"/>
+    </svg>
+
+    <svg class="bintang" width="295" height="293" viewBox="0 0 295 293" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_f_4_3)">
+        <path d="M147.5 4L181.289 112.83H290.634L202.172 180.09L235.962 288.92L147.5 221.66L59.0383 288.92L92.8277 180.09L4.366 112.83H113.711L147.5 4Z" fill="#96D0F4"/>
+        <path d="M147.5 5.68623L180.812 112.978L180.921 113.33H181.289H289.15L201.87 179.692L201.591 179.904L201.695 180.239L235.021 287.577L147.803 221.262L147.5 221.032L147.197 221.262L59.9789 287.577L93.3052 180.239L93.409 179.904L93.1303 179.692L5.8497 113.33H113.711H114.079L114.188 112.978L147.5 5.68623Z" stroke="#07215A"/>
+        </g>
+        <defs>
+        <filter id="filter0_f_4_3" x="0.365997" y="0" width="294.268" height="292.92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_4_3"/>
+        </filter>
+        </defs>
+    </svg>
+    <img src="img/svg.png" alt="Image SVG" width="200"> -->
+
+
+    <!-- FORM Validation -->
+    <!-- <form action="" method="post" autocomplete="off">
+       <div>
+        <label for="nama">Masukkan Nama:</label>
+        <input type="text" name="nama" id="nama" autofocus required minlength="3" oninvalid="this.setCustomValidity('ini harus diisi ygy')" oninput="this.setCustomValidity('')">
+       </div>
+       <div>
+        <label for="email">Masukkan Email:</label>
+        <input type="email" name="email" id="email">
+       </div>
+       <div>
+        <label for="nohp">Masukkan No Telp:</label>
+        <input type="tel" name="nohp" id="nohp">
+       </div>
+       <div>
+        <label for="website">Masukkan URL Website:</label>
+        <input type="url" name="website" id="website">
+       </div>
+       <div>
+        <label for="angka">Masukkan Angka:</label>
+        <input type="number" name="angka" id="angka" min="5" max="2000" >
+       </div>
+       <div>
+        <label for="slider">Masukkan Angka:</label>
+        <span class="awal"></span>
+        <input type="range" name="slider" id="slider" min="0" max="100" step="5">
+        <span class="akhir"></span>
+       </div>
+       <div>
+        <label for="tanggal">Masukkan Tanggal:</label>
+        <input type="date" name="tanggal" id="tanggal">
+       </div>
+       <div>
+        <label for="warna">Masukkan Warna:</label>
+        <input type="color" name="warna" id="warna">
+        <span class="hexa"></span>
+       </div>
+       <div>
+        <label for="kodepos">Masukkan kodepos:</label>
+        <input type="text" name="kodepos" id="kodepos" pattern="^([1-9])[0-9]{4}$">
+       </div>
+
+
+       <div>
+        <button type="submit">Kirim</button>
+       </div>
+    </form> -->
+
+    <!-- <script>
+        const slider= document.querySelector('#slider');
+        const awal= document.querySelector('.awal');
+        const akhir= document.querySelector('.akhir');
+
+        awal.innerHTML= slider.min;
+        akhir.innerHTML= slider.value;
+        slider.addEventListener('input',function(){
+            akhir.innerHTML=slider.value;
+        });
+
+        const warna=document.querySelector('#warna');
+        const hexa=document.querySelector('.hexa');
+
+        hexa.innerHTML=warna.value;
+        warna.addEventListener('input',function(){
+            hexa.innerHTML=warna.value;
+            hexa.style.color=warna.value;
+        });
+    </script> -->
+
+
+
+    <h1>Haii Berma</h1>
+    <a href="" onclick="gantiNama()">Ganti Nama</a>
+    <a href="" onclick="hapusNama()">Hapus Nama</a>
+    <a href="" onclick="hapusStorage()">Hapus Storage</a>
+    <a href="" class="toggle">Dark Mode</a>
+    <script>
+        const judul=document.querySelector('h1');
+
+        let nama =localStorage.getItem('nama');
+        
+        if(!nama){
+            nama=prompt('masukkan nama kamu');
+            localStorage.setItem('nama',nama);
+        }
+        judul.innerHTML=`Haii, ${nama}!`;
+
+        //ganti nama
+        const gantiNama=(e)=>{
+            nama=prompt('masukkan nama baru anda:');
+            localStorage.setItem('nama',nama);
+            e.preventDefault();
+        }
+        //hapus nama
+        const hapusNama= (e) =>{
+            localStorage.removeItem('nama');
+            e.preventDefault();
+        }
+        //hapus storage
+        const hapusStorage= (e) =>{
+            localStorage.clear();
+            e.preventDefault();
+        }
+
+        //toggle Dark Mode
+        const toggle=document.querySelector('.toggle');
+        let tema= localStorage.getItem('tema');
+
+        if(!tema){
+            localStorage.setItem('tema','light');
+        }
+
+        const darkMode=()=>{
+            document.body.classList.add('dark-mode');
+            toggle.innerHTML='Light Mode';
+            localStorage.setItem('tema','dark');
+        }
+        const lightMode=()=>{
+            document.body.classList.remove('dark-mode');
+            toggle.innerHTML='Dark Mode';
+            localStorage.setItem('tema','light');
+        }
+
+        if(tema==='dark'){
+            darkMode();
+        }
+
+        toggle.addEventListener('click',function(e){
+            tema=localStorage.getItem('tema');
+
+            if(tema==='light'){
+                darkMode();
+            }else{
+                lightMode();
+            }
+
+            e.preventDefault();
+        });
+
+    </script>
+
+
+</body>
+</html>
